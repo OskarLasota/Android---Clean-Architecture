@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply from: '../common-build-config.gradle'
+apply from: '../dependencies.gradle'
+
+
+dependencies {
+    implementation project(':data')
+    implementation project(':domain')
+    implementation project(':model')
+    repositories {
+        google()
+        jcenter()
+
+        flatDir {
+            dirs '../lib'
+        }
+    }
+    implementation kotlin.values()
+    implementation coroutines.values()
+    implementation dagger.values()
+    kapt daggerCompiler.values()
+    kapt kaptroom.values()
+    implementation room.values()
+    implementation rxjava.values()
+    implementation okHttp.values()
+    implementation retrofit.values()
+    testImplementation testing.values()
+    testImplementation mockito.values()
+    androidTestImplementation androidTesting.values()
+
+
+}
+

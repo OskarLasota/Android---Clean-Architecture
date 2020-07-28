@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+// Applies build config properties that are common for all Android modules
+apply from: '../common-build-config.gradle'
+
+// Includes definitions for the dependencies specified here
+apply from: '../dependencies.gradle'
+
+dependencies {
+    implementation project(':model')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation kotlin.values()
+    implementation dagger.values()
+    implementation coroutines.values()
+    kapt daggerCompiler.values()
+    kapt kaptroom.values()
+    implementation room.values()
+    implementation rxjava.values()
+    implementation okHttp.values()
+    implementation retrofit.values()
+    testImplementation testing.values()
+    testImplementation mockito.values()
+    androidTestImplementation androidTesting.values()
+}
+

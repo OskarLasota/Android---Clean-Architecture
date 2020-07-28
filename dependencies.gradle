@@ -1,0 +1,72 @@
+ext {
+    def daggerVersion = '2.22.1'
+
+    kotlin = [
+            kotlin : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            appcompat : 'androidx.appcompat:appcompat:1.0.0',
+            constraintlayout : 'androidx.constraintlayout:constraintlayout:1.1.3'
+    ]
+
+    dagger = [
+            dagger : "com.google.dagger:dagger:$daggerVersion",
+            daggerandroid : "com.google.dagger:dagger-android:$daggerVersion",
+    ]
+
+    daggerCompiler = [
+            daggercompiler : 'com.google.dagger:dagger-compiler:2.22.1',
+            daggerprocessor : 'com.google.dagger:dagger-android-processor:2.22.1'
+    ]
+
+    rxjava = [
+            rxandroid : 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    ]
+    coroutines = [
+            core : "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7",
+            android : "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7"
+    ]
+
+    room = [
+            runtime : 'androidx.room:room-runtime:2.2.5',
+            roomcompiler :  'androidx.room:room-compiler:2.2.5'
+    ]
+
+    kaptroom = [
+            compiler : 'androidx.room:room-compiler:2.0.0'
+    ]
+
+    okHttp = [
+            okhttp : 'com.squareup.okhttp3:okhttp:3.12.1',
+            interceptor : 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+    ]
+
+    retrofit = [
+            retrofit : 'com.squareup.retrofit2:retrofit:2.9.0',
+            converter : 'com.squareup.retrofit2:converter-gson:2.9.0',
+            rxjavaadapter : 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    ]
+
+    androidTesting = [
+            androidjunit : 'androidx.test.ext:junit:1.1.1',
+            espresso : 'androidx.test.espresso:espresso-core:3.1.0',
+            testrunner : 'com.android.support.test:runner:1.0.2'
+    ]
+
+    testing = [
+            junit : 'androidx.test.ext:junit:1.1.1',
+            espresso : 'androidx.test.espresso:espresso-core:3.1.0',
+            junitExt : 'junit:junit:4.12',
+            testcore : 'androidx.test:core:1.0.0',
+    ]
+
+    mockito = [
+            core:'org.mockito:mockito-core:2.8.9',
+            inline:'org.mockito:mockito-inline:2.13.0',
+            coroutines:"org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.2",
+            fixture: 'com.flextrade.jfixture:jfixture:2.7.0',
+            nhaarman: "com.nhaarman:mockito-kotlin:1.5.0"
+
+    ]
+
+
+
+}
